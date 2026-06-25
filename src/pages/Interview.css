@@ -1,0 +1,454 @@
+.interview-page {
+  padding: 2.5rem 0 4rem;
+  min-height: calc(100vh - 64px);
+}
+
+.interview-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.interview-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.interview-header h1 svg { color: var(--primary); }
+.interview-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Top grid */
+.interview-top-grid {
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.create-card {
+  background: var(--primary-light);
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.create-card:hover { background: #dbeafe; transform: translateY(-2px); }
+
+.create-plus {
+  width: 44px; height: 44px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+
+.create-card p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0;
+}
+
+.usage-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.usage-card h3 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.usage-numbers {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.used-count { font-size: 2rem; font-weight: 800; color: var(--text); }
+.usage-sep { font-size: 1.2rem; color: var(--text-muted); }
+.total-count { font-size: 1.2rem; color: var(--text-muted); }
+
+.usage-bar-wrap { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.usage-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.usage-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.usage-label { font-size: 0.78rem; color: var(--text-muted); }
+
+.stats-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+.stat-num { font-size: 1.75rem; font-weight: 800; }
+.stat-label { font-size: 0.75rem; color: var(--text-muted); font-weight: 500; }
+.stat-divider { width: 1px; height: 40px; background: var(--border); }
+
+/* Past interviews section */
+.past-section {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.past-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.past-header h2 { font-size: 1.1rem; font-weight: 700; }
+
+.past-controls { display: flex; align-items: center; gap: 0.5rem; }
+
+.filter-wrap { position: relative; }
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  z-index: 50;
+  overflow: hidden;
+  min-width: 140px;
+}
+
+.filter-dropdown button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.filter-dropdown button:hover { background: var(--bg); }
+.filter-dropdown button.active { color: var(--primary); font-weight: 600; background: var(--primary-light); }
+
+.view-btn {
+  width: 34px; height: 34px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: all 0.2s;
+}
+
+.view-btn:hover, .view-btn.active { background: var(--primary-light); color: var(--primary); border-color: var(--primary); }
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 3.5rem 1rem;
+  color: var(--text-muted);
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.3;
+}
+
+.empty-state h3 { font-size: 1.1rem; margin-bottom: 0.4rem; color: var(--text); }
+.empty-state p { font-size: 0.875rem; }
+
+/* Interview cards */
+.interviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.interviews-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.interview-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  transition: box-shadow 0.2s;
+}
+
+.interview-card:hover { box-shadow: var(--shadow); }
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.card-top h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.15rem; }
+.candidate-name { font-size: 0.8rem; color: var(--text-muted); }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.status.scheduled { background: #eff6ff; color: var(--primary); }
+.status.completed { background: #f0fdf4; color: #166534; }
+.status.cancelled { background: #fef2f2; color: #b91c1c; }
+
+.card-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.card-meta svg { margin-right: 0.3rem; }
+
+.card-details {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+}
+
+.card-actions { display: flex; gap: 0.5rem; }
+
+.action-btn {
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.action-btn:hover { opacity: 0.8; }
+.action-btn.complete { background: #dcfce7; color: #166534; }
+.action-btn.cancel { background: #fef2f2; color: #b91c1c; }
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-box {
+  background: white;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+  animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-header h2 svg { color: var(--primary); }
+
+.modal-close {
+  width: 32px; height: 32px;
+  border: none;
+  background: var(--bg);
+  border-radius: 8px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted);
+  line-height: 1;
+}
+.modal-close:hover { background: var(--border); }
+
+.modal-form {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.modal-field label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.modal-field input, .modal-field textarea {
+  padding: 0.65rem 0.9rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.2s;
+  resize: none;
+}
+
+.modal-field input:focus, .modal-field textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+  background: white;
+}
+
+.field-error { font-size: 0.75rem; color: var(--danger); }
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Locked state */
+.interview-locked {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.locked-card {
+  text-align: center;
+  max-width: 400px;
+}
+
+.locked-icon {
+  width: 72px; height: 72px;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 1.5rem;
+}
+
+.locked-card h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.6rem; }
+.locked-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.75rem; }
+
+.locked-actions { display: flex; gap: 0.75rem; justify-content: center; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .interview-top-grid { grid-template-columns: 1fr 1fr; }
+  .create-card { grid-column: span 2; }
+  .stats-card { grid-column: span 2; }
+  .modal-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .interview-top-grid { grid-template-columns: 1fr; }
+  .create-card { grid-column: span 1; }
+  .stats-card { grid-column: span 1; }
+}
