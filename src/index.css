@@ -137,7 +137,7 @@ input, textarea, select { font-family: 'Inter', sans-serif; }
 }
 
 .btn-outline {
-  background: white;
+  background: transparent;
   color: var(--primary);
   border: 1.5px solid var(--primary);
 }

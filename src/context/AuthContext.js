@@ -8,10 +8,7 @@ export const AuthProvider = ({ children }) => {
     return saved ? JSON.parse(saved) : null;
   });
 
-  const [users, setUsers] = useState(() => {
-    const saved = localStorage.getItem('codehive_users');
-    return saved ? JSON.parse(saved) : [];
-  });
+
 
   useEffect(() => {
     if (user) localStorage.setItem('codehive_user', JSON.stringify(user));
@@ -29,7 +26,6 @@ export const AuthProvider = ({ children }) => {
     const newUser = { username, email, password, createdAt: new Date().toISOString() };
     const updated = [...existingUsers, newUser];
     localStorage.setItem('codehive_users', JSON.stringify(updated));
-    setUsers(updated);
     setUser({ username, email });
     return { success: true };
   };

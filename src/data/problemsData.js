@@ -2,7 +2,7 @@ export const TOPICS = [
   {
     id: 'arrays',
     label: 'Arrays',
-    icon: '▦',
+    icon: 'arrays',
     color: '#2563eb',
     desc: 'Master array manipulation with essential problems',
     sections: [
@@ -10,8 +10,8 @@ export const TOPICS = [
         title: 'Easy',
         difficulty: 'easy',
         problems: [
-          { id: 1, title: 'Largest Element', link: 'https://www.geeksforgeeks.org/problems/largest-element-in-array4009/1', platform: 'gfg' },
-          { id: 2, title: 'Second Largest Element', link: 'https://www.geeksforgeeks.org/problems/second-largest3735/1', platform: 'gfg' },
+          { id: 1, title: 'Largest Element', link: 'https://leetcode.com/problems/find-the-maximum-element/', platform: 'lc' },
+          { id: 2, title: 'Second Largest Element', link: 'https://practice.geeksforgeeks.org/problems/second-largest/', platform: 'gfg' },
           { id: 3, title: 'Check if the Array is Sorted', link: 'https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/', platform: 'lc' },
           { id: 4, title: 'Remove Duplicates from Sorted Array', link: 'https://leetcode.com/problems/remove-duplicates-from-sorted-array/', platform: 'lc' },
           { id: 5, title: 'Left Rotate Array by One', link: 'https://practice.geeksforgeeks.org/problems/cyclically-rotate-an-array-by-one/', platform: 'gfg' },
@@ -70,7 +70,7 @@ export const TOPICS = [
   {
     id: 'strings',
     label: 'Strings',
-    icon: 'Aa',
+    icon: 'strings',
     color: '#7c3aed',
     desc: 'Tackle string manipulation and pattern matching',
     sections: [
@@ -119,7 +119,7 @@ export const TOPICS = [
   {
     id: 'linked-list',
     label: 'Linked List',
-    icon: '↔',
+    icon: 'linked-list',
     color: '#0891b2',
     desc: 'Pointers, reversal, and linked list patterns',
     sections: [
@@ -170,7 +170,7 @@ export const TOPICS = [
   {
     id: 'stacks-queues',
     label: 'Stacks & Queues',
-    icon: '☰',
+    icon: 'stacks',
     color: '#059669',
     desc: 'Stack and queue patterns for interview success',
     sections: [
@@ -215,7 +215,7 @@ export const TOPICS = [
   {
     id: 'recursion',
     label: 'Recursion',
-    icon: '↻',
+    icon: 'recursion',
     color: '#dc2626',
     desc: 'Backtracking and recursive problem solving',
     sections: [
@@ -267,7 +267,7 @@ export const TOPICS = [
   {
     id: 'dynamic-programming',
     label: 'Dynamic Programming',
-    icon: '◈',
+    icon: 'dp',
     color: '#7c3aed',
     desc: 'Memoization, tabulation, and DP patterns',
     sections: [
@@ -348,7 +348,7 @@ export const TOPICS = [
   {
     id: 'graphs',
     label: 'Graphs',
-    icon: '⬡',
+    icon: 'graphs',
     color: '#059669',
     desc: 'BFS, DFS, shortest paths, and graph algorithms',
     sections: [
@@ -406,7 +406,7 @@ export const TOPICS = [
   {
     id: 'greedy',
     label: 'Greedy',
-    icon: '⚡',
+    icon: 'greedy',
     color: '#d97706',
     desc: 'Greedy choices for optimal solutions',
     sections: [

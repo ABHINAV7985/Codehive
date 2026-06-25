@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -136,7 +136,6 @@ const parseBody = (text) =>
 /* ───────────────────────────── COMPONENT ───────────────────────────── */
 const Learn = () => {
   const { lang } = useParams();
-  const navigate = useNavigate();
   const { user } = useAuth();
 
   const course = curriculum[lang?.toLowerCase()];

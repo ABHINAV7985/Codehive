@@ -38,7 +38,7 @@ const Home = () => (
     {/* Hero */}
     <section className="hero">
       <div className="hero-content container">
-        <div className="hero-badge">Trusted by 500k+ developers</div>
+        <div className="hero-badge">🚀 Trusted by 500k+ developers</div>
         <h1>Welcome to <span className="hero-highlight">CodeHive</span></h1>
         <p>Your ultimate destination to practice coding, prepare for interviews, and master programming skills. Join a hive of learners building their future.</p>
         <div className="hero-actions">

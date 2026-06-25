@@ -11,7 +11,6 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-     window.scrollTo({ top: 0, behavior: 'smooth' });
     localStorage.setItem('codehive_theme', dark ? 'dark' : 'light');
   }, [dark]);
 

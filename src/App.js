@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
-import ScrollToTop from "./components/scrollToTop";
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -20,7 +19,6 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <Router>
-           <ScrollToTop />
           <Routes>
             {/* Problems page has its own full nav */}
             <Route path="/problems/:topicId" element={<Problems />} />
@@ -48,6 +46,5 @@ function App() {
     </ThemeProvider>
   );
 }
-
 
 export default App;

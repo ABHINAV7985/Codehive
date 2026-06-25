@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faSearch, faCheckSquare, faSquare, faHome,
   faChevronRight, faBars, faTimes, faSun, faMoon,
-  faUser, faSignOutAlt, faCheck, faCode, faStickyNote,
+  faSignOutAlt, faCheck, faCode, faStickyNote,
   faLayerGroup, faFont, faProjectDiagram, faBrain,
   faRedo, faLink, faStream, faBolt, faListUl,
   faBookOpen, faClipboardList, faTh, faPercent
